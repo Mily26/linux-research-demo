@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Milagros Alvarez Cisterna</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<script src="build/libv86.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script>
+    "use strict";
+    //todo modify this
+    function updateTime() {
+        const currentTimeSpan = document.getElementById("current-time");
+        const now = new Date();
+        const hours = String(now.getHours()).padStart(2, '0');
+        const minutes = String(now.getMinutes()).padStart(2, '0');
+        const seconds = String(now.getSeconds()).padStart(2, '0');
+        currentTimeSpan.textContent = `${hours}:${minutes}:${seconds}`;
+    }
+    window.onload = function () {
+        var emulator = window.emulator = new V86({
+            wasm_path: "../build/v86.wasm",
+            memory_size: 32 * 1024 * 1024,
+            vga_memory_size: 2 * 1024 * 1024,
+            screen_container: document.getElementById("screen_container"),
+            bios: {
+                url: "../bios/seabios.bin",
+            },
+            vga_bios: {
+                url: "../bios/vgabios.bin",
+            },
+            cdrom: {
+                url: "../images/linux.iso",
+            },
+            autostart: true,
+        });
+
+    }
+    setInterval(updateTime, 1000);
+    
+
+</script>
+
+<body>
+    <div class="top-bar">
+        <div class="menu-section">
+            <img src="img/101872_debian_512x512.png" alt="debian-logo" class="main-logo">
+            <span>Applications</span>
+            <span>Places</span>
+        </div>
+        <div class="icon-section">
+            <!-- <img src="chrome.png" alt="Chrome" class="icon"> -->
+            <button id="btn-terminal" class="taskbar-btn">
+                <img src="img/icon-terminal.png" alt="Terminal" class="icon" title="Terminal"></button>
+            <div id="btn-gedit" class="taskbar-btn">
+                <img src="img/icon-gedit.png" alt="Gedit" class="icon" title="Gedit">
+            </div>
+
+        </div>
+        <div class="status-section">
+            <span id="current-time"></span>
+        </div>
+    </div>
+    <div class="main-area">
+        <div class="window-terminal">
+            <div id="screen_container">
+                <div style="white-space: pre; font: 14px monospace; line-height: 14px"></div>
+                <canvas style="display: none"></canvas>
+            </div>
+        </div>
+        <div class="window-gedit">
+            <div id="window-content" class="window-content">
+                <p>This is some content</p>
+            </div>
+        </div>
+    </div>
+<script>
+    const btnTerminal = document.getElementById("btn-terminal");
+    const btnGedit = document.getElementById("btn-gedit");
+    const geditWindow = document.querySelector(".window-gedit");
+    const terminalWindow = document.querySelector(".window-terminal");
+    btnTerminal.addEventListener("click", function () {
+        const terminalWindow = document.querySelector(".window-terminal");
+        const geditWindow = document.querySelector(".window-gedit");
+        terminalWindow.style.display = "block";
+        geditWindow.style.display = "none";
+    });
+
+    btnGedit.addEventListener("click", function () {
+        const terminalWindow = document.querySelector(".window-terminal");
+        const geditWindow = document.querySelector(".window-gedit");
+        terminalWindow.style.display = "none";
+        geditWindow.style.display = "block";
+    });
+
+    async function loadDocument() {
+        const response = await fetch('./document.md');
+        const content = await response.text();
+        document.getElementById('window-content').innerHTML = marked.parse(content);
+    }
+    loadDocument()
+    // const response = await fetch('./document.md');
+    // const content = await response.text();
+
+    // let documentContent = `## Marked in browser≠\n   [Google](https://www.google.com)
+    // `;
+    // // documentContent = "# Marketd in the browser";
+
+    // document.getElementById('window-content').innerHTML =
+    //   marked.parse(content);
+
+</script>
+</body>
+
+</html>
