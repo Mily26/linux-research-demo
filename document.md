@@ -179,11 +179,11 @@ Los sistemas de recomendación utilizan el aprendizaje supervisado como así tam
 
 #### Análisis de imágenes
 
-Las aplicaciones de análisis de imágenes  Como por ejemplo las de diagnóstico médico, reconocimiento facial son comunes en Linux. Open CV y tensorflow son utilizadas en Linux para realizar el procesamiento de imágenes.  Estos sistemas de análisis de imágenes se utilizan por ejemplo en radiografías en vehículos autónomos reconociendo señales y obstáculos y también en seguridad a través del reconocimiento facial.
+Las aplicaciones de análisis de imágenes  Como por ejemplo las de diagnóstico médico, reconocimiento facial son comunes en Linux. Open CV y tensorflow son utilizadas en Linux para realizar el procesamiento de imágenes.  Estos sistemas de análisis de imágenes se utilizan por ejemplo en radiografías, en vehículos autónomos reconociendo señales y obstáculos y también en seguridad a través del reconocimiento facial.
 
 #### Detección de fraudes
 
-Los sistemas de detección de fraude en Linux son implementados en empresas financieras y de comercio electrónico para poder analizar las transacciones y detectar patrones anómalos.  La detección de fraudes está basada en modelos de  Machine learning que analizan los datos históricos y detectan patrones de fraude en tiempo real. Linux permite desplegar estos sistemas debido a su estabilidad y la capacidad que tiene de manejar grandes volúmenes de datos. para la gestión de flujo de datos en tiempo real son comunes las bibliotecas como Apache Kafka, scikit-learn.  Estos sistemas para detectar fraudes se aplican en pagos en líneas, transacciones bancarias , sistemas de crédito y ayudan a identificar actividades fraudulentas , sospechosas y a proteger la información del usuario.
+Los sistemas de detección de fraude en Linux son implementados en empresas financieras y de comercio electrónico para poder analizar las transacciones y detectar patrones anómalos.  La detección de fraudes está basada en modelos de  Machine learning que analizan los datos históricos y detectan patrones de fraude en tiempo real. Linux permite desplegar estos sistemas debido a su estabilidad y la capacidad que tiene de manejar grandes volúmenes de datos. Para la gestión de flujo de datos en tiempo real son comunes las bibliotecas como Apache Kafka, scikit-learn.  Estos sistemas para detectar fraudes se aplican en pagos en líneas, transacciones bancarias , sistemas de crédito y ayudan a identificar actividades fraudulentas , sospechosas y a proteger la información del usuario.
 
 
 ## 3. Distribuciones de Linux
@@ -196,8 +196,8 @@ Los sistemas de detección de fraude en Linux son implementados en empresas fina
 
 Para un desarrollador, Ubuntu es una de las distribuciones más recomendable y a su vez una de las más populares por las siguientes razones:
 
-- La experiencia de usuario es amigable, fácil de instalar y también de mantener . su comunidad y su aporte hacen que sea una opción accesible para desarrolladores de todo seniority.
-- Es compatible con numerosos programas y herramientas para el desarrollo,  Desde entornos de desarrollo integrados, frameworks , bibliotecas hasta compiladores.
+- La experiencia de usuario es amigable, fácil de instalar y también de mantener . Su comunidad y su aporte hacen que sea una opción accesible para desarrolladores de todo seniority.
+- Es compatible con numerosos programas y herramientas para el desarrollo,  desde entornos de desarrollo integrados, frameworks , bibliotecas hasta compiladores.
 - Ofrece versiones LTS que poseen actualizaciones en cuanto a seguridad y también son estables en el tiempo.
 - Que esta distribución tenga una comunidad extensa y activa que proporciona documentación, tutoriales , la hace útil para poder resolver problemas y aprender novedosas técnicas de desarrollo.
 
