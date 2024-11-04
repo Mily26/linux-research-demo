@@ -144,12 +144,12 @@ Es una aplicación que permite compartir y crear documentos que contiene código
 
 ##### Aplicaciones
 - Facilita la iteración rápida y a su vez poder depurar fácilmente el código ya que permite modificar y probar los modelos inmediatamente.
-- Se pueden usar bibliotecas como Matt Plot Liv  Y sea burn para poder explorar y también entender los datos es decir que soporta Gráficos.
+- Se pueden usar bibliotecas como Matplotlib  y Seaborn para poder explorar y también entender los datos, es decir que soporta Gráficos.
 - Es útil para generar reportes y también presentaciones por eso es útil en proyectos de investigación y presentación de resultados.
 
 #### Weka
 
-Es un software de código abierto con interfaz gráfica de aprendizaje automático que está desarrollado en Java.  Incluye algoritmos de Machine Learning para clasificación regresión clustering reglas de asociación y selección de atributos este software permite poder ejecutar y visualizar los resultados sin necesidad de programar.
+Es un software de código abierto con interfaz gráfica de aprendizaje automático que está desarrollado en Java.  Incluye algoritmos de Machine Learning para clasificación, regresión, clustering, reglas de asociación y selección de atributos este software permite poder ejecutar y visualizar los resultados sin necesidad de programar.
 
 ##### Aplicaciones
 - Es un excelente herramienta para construir modelos y explorar datos sin tener experiencia en programación
